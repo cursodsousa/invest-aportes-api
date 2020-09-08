@@ -1,4 +1,4 @@
-package io.github.dougllasfps.aportesapi.domain.aportes.infraestructure;
+package io.github.dougllasfps.aportesapi.application.rest;
 
 import io.github.dougllasfps.aportesapi.domain.aportes.Aporte;
 import io.github.dougllasfps.aportesapi.domain.aportes.AporteService;
@@ -19,10 +19,14 @@ class AporteController {
         return service.saveOrUpdate(aporte);
     }
 
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(Long id){
+        service.deleteById(id);
+    }
+
     @GetMapping
     public Iterable<Aporte> getByUsuarioAndAno(@RequestParam Long usuarioId, @RequestParam Integer ano){
         return service.getByUsuarioId(usuarioId, ano);
     }
-
-
 }

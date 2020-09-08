@@ -1,5 +1,6 @@
 package io.github.dougllasfps.aportesapi.domain.aportes;
 
+import io.github.dougllasfps.aportesapi.infrastructure.repository.AporteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
