@@ -2,6 +2,7 @@ package io.github.dougllasfps.aportesapi.domain.aportes;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Data@NoArgsConstructor
+@ToString
 public class Aporte implements Serializable {
 
     @Id
