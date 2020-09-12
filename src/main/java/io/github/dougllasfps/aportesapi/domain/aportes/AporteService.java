@@ -23,6 +23,6 @@ public class AporteService {
 
     @Transactional
     public Iterable<Aporte> getByUsuarioId(Long idUsuario, Integer anoId){
-        return repository.findByUsuarioidAndAno(idUsuario, anoId);
+        return repository.findByUsuarioidAndAnoOrderByMesDesc(idUsuario, anoId);
     }
 }
